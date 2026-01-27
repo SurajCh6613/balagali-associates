@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+    <g id="icon">
+        <path d="M 45 15 L 60 10 L 75 15 L 75 45 C 75 60 60 70 60 70 C 60 70 45 60 45 45 Z" fill="#C8B37E" opacity="0.15"/>
+        <rect x="56" y="55" width="8" height="30" fill="#C8B37E"/>
+        <rect x="50" y="83" width="20" height="4" fill="#C8B37E"/>
+        <path d="M 52 25 L 52 60 L 62 60 C 66 60 68 58 68 54 C 68 52 67 50 65 49 C 67 48 68 46 68 43 C 68 39 66 37 62 37 L 57 37 L 57 25 Z M 57 41 L 62 41 C 63 41 64 42 64 43 C 64 44 63 45 62 45 L 57 45 Z M 57 49 L 62 49 C 63 49 64 50 64 51 C 64 52 63 53 62 53 L 57 53 Z" fill="#EEEBDC"/>
+        <line x1="48" y1="28" x2="72" y2="28" stroke="#EEEBDC" stroke-width="2"/>
+        <circle cx="60" cy="28" r="3" fill="#C8B37E"/>
+        <path d="M 48 28 L 43 33 L 53 33 Z" fill="#EEEBDC" opacity="0.8"/>
+        <path d="M 72 28 L 67 33 L 77 33 Z" fill="#EEEBDC" opacity="0.8"/>
+        <line x1="48" y1="28" x2="48" y2="33" stroke="#EEEBDC" stroke-width="1"/>
+        <line x1="72" y1="28" x2="72" y2="33" stroke="#EEEBDC" stroke-width="1"/>
+    </g>
+    <text x="95" y="50" font-family="Cinzel, serif" font-size="32" font-weight="700" fill="#C8B37E" letter-spacing="2">BALAGALI</text>
+    <text x="95" y="75" font-family="Cormorant Garamond, serif" font-size="20" font-weight="600" fill="#EEEBDC" letter-spacing="8">ASSOCIATES</text>
+    <line x1="95" y1="82" x2="380" y2="82" stroke="#C8B37E" stroke-width="1" opacity="0.5"/>
+</svg>
