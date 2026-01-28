@@ -143,7 +143,7 @@ const practiceAreas = [
     icon: <Briefcase size={32} />,
   },
   {
-    title: "Family & Divorce Law",
+    title: "Family & Matrimonial Law",
     icon: <Users size={32} />,
   },
   {
@@ -166,7 +166,7 @@ const practiceAreas = [
 
 export default function PracticeAreas() {
   return (
-    <section className="section-padding  bg-[url('/hero1.png')] bg-cover relative">
+    <section id="practice" className="section-padding  bg-[url('/hero1.png')] bg-cover relative">
       <div className="absolute inset-0 bg-black/85"></div>
 
       {/* Heading Section */}
