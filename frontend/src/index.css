@@ -130,7 +130,7 @@
 
   /* Section Spacing */
   .section-padding {
-    padding: clamp(4rem, 8vw, 8rem) 1rem;
+    @apply px-6 py-10
   }
 
   /* Floating Animation */

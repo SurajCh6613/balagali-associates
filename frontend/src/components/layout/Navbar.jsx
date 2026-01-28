@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, PhoneIcon, X } from "lucide-react";
 import logo from "/balagali-associates.png";
 
 const navLinks = [
@@ -36,9 +36,12 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 md:px-8 w-full">
         <div className="flex items-center justify-between py-2">
-
           <a href="#home" className="h-full">
-            <img src={logo} alt="Balagali Associates logo" className="h-10 md:h-20" />
+            <img
+              src={logo}
+              alt="Balagali Associates logo"
+              className="h-10 md:h-20"
+            />
           </a>
 
           {/* Desktop Navigation */}
@@ -53,8 +56,9 @@ const Navbar = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
-            <a href="#contact" className="btn-gold text-sm">
-              Book Consultation
+            <a href="tel:+91 6363016716" className="btn-gold text-sm flex gap-1 text-brown font-semibold">
+              <PhoneIcon />
+              +91 6363016716
             </a>
           </div>
 
