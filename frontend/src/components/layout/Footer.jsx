@@ -111,7 +111,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-muted-foreground text-sm">
-                  123 Legal Avenue, High Court Road, New Delhi - 110001
+                 R/at D. No.16/4, 3rd main, 10th cross, beside Magadi road, Govindrajnagar, Vijayanagar, Bengaluru, Karnataka-560040
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -120,7 +120,7 @@ const Footer = () => {
                   href="tel:+919876543210"
                   className="text-muted-foreground hover:text-primary text-sm transition-colors"
                 >
-                  +91 98765 43210
+                  +91 6363016716
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -129,7 +129,7 @@ const Footer = () => {
                   href="mailto:advocate.kumar@legalmail.com"
                   className="text-muted-foreground hover:text-primary text-sm transition-colors"
                 >
-                  advocate.kumar@legalmail.com
+                  bhailappab@gmail.com
                 </a>
               </li>
             </ul>
@@ -140,7 +140,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-muted-foreground text-sm text-center md:text-left">
-              © {new Date().getFullYear()} Advocate Kumar. All rights reserved.
+              © {new Date().getFullYear()} Advocate Balagali. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
               <a href="#" className="hover:text-primary transition-colors">

@@ -6,6 +6,7 @@ import PracticeAreas from "../../pages/PracticeAreas";
 import Gallery from "../../pages/Gallery";
 import Contact from "../../pages/Contact";
 import FAQ from "../../pages/FAQ";
+import Footer from "./Footer";
 
 const Layout = () => {
   return (
@@ -17,6 +18,7 @@ const Layout = () => {
       <Contact />
       <FAQ />
       <Gallery />
+      <Footer />
     </div>
   );
 };
