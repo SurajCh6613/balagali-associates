@@ -42,7 +42,7 @@ const Footer = () => {
             <a href="#home" className="flex items-center gap-3 mb-6">
               <Scale className="w-8 h-8 text-gold" />
               <span className="font-serif text-xl font-semibold text-foreground">
-                Advocate <span className="text-gold">Kumar</span>
+                Advocate <span className="text-gold">Balagali</span>
               </span>
             </a>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
