@@ -40,9 +40,9 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <a href="#home" className="flex items-center gap-3 mb-6">
-              <Scale className="w-8 h-8 text-primary" />
+              <Scale className="w-8 h-8 text-gold" />
               <span className="font-serif text-xl font-semibold text-foreground">
-                Advocate <span className="text-primary">Kumar</span>
+                Advocate <span className="text-gold">Kumar</span>
               </span>
             </a>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
@@ -74,7 +74,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                    className="text-muted-foreground hover:text-gold transition-colors text-sm"
                   >
                     {link.name}
                   </a>
@@ -93,7 +93,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                    className="text-muted-foreground hover:text-gold transition-colors text-sm"
                   >
                     {link.name}
                   </a>
@@ -109,25 +109,25 @@ const Footer = () => {
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
                 <span className="text-muted-foreground text-sm">
                  R/at D. No.16/4, 3rd main, 10th cross, beside Magadi road, Govindrajnagar, Vijayanagar, Bengaluru, Karnataka-560040
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-primary flex-shrink-0" />
+                <Phone className="w-5 h-5 text-gold flex-shrink-0" />
                 <a
-                  href="tel:+919876543210"
-                  className="text-muted-foreground hover:text-primary text-sm transition-colors"
+                  href="tel:+916363016716"
+                  className="text-muted-foreground hover:text-gold text-sm transition-colors"
                 >
-                  +91 6363016716
+                  +916363016716
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-primary flex-shrink-0" />
+                <Mail className="w-5 h-5 text-gold flex-shrink-0" />
                 <a
-                  href="mailto:advocate.kumar@legalmail.com"
-                  className="text-muted-foreground hover:text-primary text-sm transition-colors"
+                  href="mailto:bhailappab@gmail.com"
+                  className="text-muted-foreground hover:text-gold text-sm transition-colors"
                 >
                   bhailappab@gmail.com
                 </a>
@@ -140,7 +140,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-muted-foreground text-sm text-center md:text-left">
-              © {new Date().getFullYear()} Advocate Balagali. All rights reserved.
+              © {new Date().getFullYear()} Balagali Associates. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
               <a href="#" className="hover:text-primary transition-colors">
