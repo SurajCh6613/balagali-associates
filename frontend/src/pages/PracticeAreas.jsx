@@ -57,7 +57,7 @@
 //   return (
 //     <section id="practice" className="section-padding relative bg-secondary/30">
 //       {/* Background Accent */}
-//       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/5 rounded-full blur-3xl" />
+//       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gold/5 rounded-full blur-3xl" />
 
 //       <div className="container mx-auto relative">
 //         {/* Section Header */}
@@ -67,11 +67,11 @@
 //           transition={{ duration: 0.6 }}
 //           className="text-center mb-16"
 //         >
-//           <span className="text-primary text-sm font-medium tracking-widest uppercase mb-4 block">
+//           <span className="text-gold text-sm font-medium tracking-widest uppercase mb-4 block">
 //             Legal Expertise
 //           </span>
 //           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-//             Practice <span className="text-primary">Areas</span>
+//             Practice <span className="text-gold">Areas</span>
 //           </h2>
 //           <p className="text-muted-foreground max-w-2xl mx-auto">
 //             Comprehensive legal services across multiple domains with a track
@@ -89,14 +89,14 @@
 //               transition={{ duration: 0.5, delay: index * 0.1 }}
 //               className="group relative"
 //             >
-//               <div className="glass-panel p-8 h-full card-hover border border-transparent hover:border-primary/30 cursor-pointer">
+//               <div className="glass-panel p-8 h-full card-hover border border-transparent hover:border-gold/30 cursor-pointer">
 //                 {/* Icon */}
-//                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-//                   <area.icon className="w-7 h-7 text-primary" />
+//                 <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
+//                   <area.icon className="w-7 h-7 text-gold" />
 //                 </div>
 
 //                 {/* Content */}
-//                 <h3 className="font-serif text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+//                 <h3 className="font-serif text-xl font-semibold text-foreground mb-3 group-hover:text-gold transition-colors">
 //                   {area.title}
 //                 </h3>
 //                 <p className="text-muted-foreground text-sm leading-relaxed mb-4">
@@ -104,13 +104,13 @@
 //                 </p>
 
 //                 {/* Link */}
-//                 <div className="flex items-center gap-2 text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+//                 <div className="flex items-center gap-2 text-gold text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
 //                   <span>Learn More</span>
 //                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
 //                 </div>
 
 //                 {/* Hover Glow */}
-//                 <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+//                 <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
 //               </div>
 //             </motion.div>
 //           ))}
@@ -121,10 +121,6 @@
 // };
 
 // export default PracticeAreas;
-
-
-
-
 
 import { motion } from "framer-motion";
 import {
@@ -170,7 +166,8 @@ const practiceAreas = [
 
 export default function PracticeAreas() {
   return (
-    <section className="section-padding">
+    <section className="section-padding  bg-[url('/hero1.png')] bg-cover relative">
+      <div className="absolute inset-0 bg-black/85"></div>
 
       {/* Heading Section */}
       <motion.div
@@ -178,7 +175,7 @@ export default function PracticeAreas() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
-        className="text-center max-w-4xl mx-auto mb-14"
+        className="text-center max-w-4xl mx-auto mb-14 relative"
       >
         <p className="text-gold uppercase tracking-widest text-sm mb-3">
           We Handle Various Legal Cases in India
@@ -197,7 +194,6 @@ export default function PracticeAreas() {
 
       {/* Cards Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-
         {practiceAreas.map((item, index) => (
           <motion.div
             key={index}
@@ -208,7 +204,6 @@ export default function PracticeAreas() {
             whileHover={{ scale: 1.05 }}
             className="group border border-gold/30 bg-black hover:bg-[#2a1b0a] transition-all duration-300 rounded-xl p-8 cursor-pointer relative overflow-hidden"
           >
-
             {/* Glow Effect */}
             <div className="absolute inset-0 bg-linear-to-r from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
 
@@ -221,10 +216,8 @@ export default function PracticeAreas() {
             <h3 className="text-white text-xl font-semibold relative z-10">
               {item.title}
             </h3>
-
           </motion.div>
         ))}
-
       </div>
     </section>
   );

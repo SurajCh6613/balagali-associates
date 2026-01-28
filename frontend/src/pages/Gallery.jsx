@@ -60,8 +60,12 @@ const Gallery = () => {
   };
 
   return (
-    <section id="gallery" className="section-padding">
-      <div className="container mx-auto">
+    <section
+      id="gallery"
+      className="section-padding bg-[url('/hero1.png')] bg-cover relative"
+    >
+      <div className="absolute inset-0 bg-black/75"></div>
+      <div className="container mx-auto relative">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -73,7 +77,7 @@ const Gallery = () => {
             Our Work
           </span>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Photo <span className="text-primary">Gallery</span>
+            Photo <span className="text-gold">Gallery</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             A glimpse into our legal practice, courtroom advocacy, and client
@@ -106,12 +110,12 @@ const Gallery = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <div className="absolute inset-0 bg-linear-to-t from-background via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                 <span className="text-foreground font-medium text-sm">
                   {image.caption}
                 </span>
               </div>
-              <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/50 rounded-xl transition-colors duration-300" />
+              <div className="absolute inset-0 border-2 border-gold/0 group-hover:border-gold/50 rounded-xl transition-colors duration-300" />
             </motion.div>
           ))}
         </div>
@@ -129,7 +133,7 @@ const Gallery = () => {
           {/* Close Button */}
           <button
             onClick={closeLightbox}
-            className="absolute top-6 right-6 w-12 h-12 rounded-full bg-card/80 flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+            className="absolute top-6 right-6 w-12 h-12 rounded-full bg-card/80 flex items-center justify-center text-foreground hover:bg-gold hover:text-gold-foreground transition-colors"
           >
             <X className="w-6 h-6" />
           </button>
@@ -140,7 +144,7 @@ const Gallery = () => {
               e.stopPropagation();
               prevImage();
             }}
-            className="absolute left-4 md:left-8 w-12 h-12 rounded-full bg-card/80 flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+            className="absolute left-4 md:left-8 w-12 h-12 rounded-full bg-card/80 flex items-center justify-center text-foreground hover:bg-gold hover:text-gold-foreground transition-colors"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
@@ -149,7 +153,7 @@ const Gallery = () => {
               e.stopPropagation();
               nextImage();
             }}
-            className="absolute right-4 md:right-8 w-12 h-12 rounded-full bg-card/80 flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+            className="absolute right-4 md:right-8 w-12 h-12 rounded-full bg-card/80 flex items-center justify-center text-foreground hover:bg-gold hover:text-gold-foreground transition-colors"
           >
             <ChevronRight className="w-6 h-6" />
           </button>

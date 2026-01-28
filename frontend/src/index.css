@@ -4,13 +4,15 @@
 
 @theme {
   /* Primary Colors */
-  --color-gold: hsl(43 35% 64%);
+  --color-gold: hsl(43 32% 62%);
   --color-gold-light: hsl(43 40% 75%);
   --color-gold-dark: hsl(43 45% 45%);
 
-  /* Neutral Colors */
-  --color-slate: hsl(60 4% 46%);
-  --color-brown: hsl(24 74% 27%);
+  --color-primary: hsl(40, 5%, 11%);
+  --color-secondary: hsl(55, 28%, 85%)
+    /* Neutral Colors */
+    --color-slate: hsl(51 6% 45%);
+  --color-brown: hsl(22 70% 28%);
   --color-charcoal: hsl(0 0% 9%);
   --color-charcoal-light: hsl(0 0% 14%);
   --color-ivory: hsl(45 33% 90%);
@@ -24,6 +26,10 @@
 
   /* Radius */
   --radius-xl: 0.75rem;
+  --radius-md: 0.6rem;
+  --radius-sm: 0.25rem;
+  --radius-none: 0;
+  --radius-default: 0.3rem;
 
   /* Shadows */
   --shadow-gold: 0 4px 24px hsl(43 35% 64% / 0.25);
@@ -69,7 +75,7 @@
         hsl(0 0% 100% / 0.02));
     backdrop-filter: blur(20px);
     border: 1px solid hsl(0 0% 100% / 0.1);
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-default);
   }
 
 
@@ -93,7 +99,7 @@
     background: var(--color-gold);
     color: var(--color-charcoal);
     padding: 0.75rem 1.5rem;
-    border-radius: 0.6rem;
+    border-radius: var(--radius-default);
     font-weight: 500;
     transition: all 0.3s ease;
   }
@@ -109,7 +115,7 @@
     color: var(--color-gold);
     background: transparent;
     padding: 0.75rem 1.5rem;
-    border-radius: 0.6rem;
+    border-radius: var(--radius-default);
     transition: all 0.3s ease;
   }
 

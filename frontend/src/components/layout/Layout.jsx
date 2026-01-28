@@ -5,6 +5,7 @@ import About from "../../pages/About";
 import PracticeAreas from "../../pages/PracticeAreas";
 import Gallery from "../../pages/Gallery";
 import Contact from "../../pages/Contact";
+import FAQ from "../../pages/FAQ";
 
 const Layout = () => {
   return (
@@ -14,6 +15,7 @@ const Layout = () => {
       <About />
       <PracticeAreas />
       <Contact />
+      <FAQ />
       <Gallery />
     </div>
   );

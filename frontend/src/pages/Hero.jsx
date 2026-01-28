@@ -1,17 +1,17 @@
 import { motion } from "framer-motion";
-import { ChevronDown, Award, Users, Briefcase } from "lucide-react";
+import { Award, Users, Briefcase } from "lucide-react";
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="relative h-screen w-full bg-[url('/hero1.png')] bg-cover bg-center"
+      className="relative min-h-screen w-full bg-[url('/hero1.png')] bg-cover bg-center"
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/65"></div>
 
       {/* Hero Content */}
-      <div className="relative z-10 section-padding flex items-center h-full px-10 pt-36 md:px-20">
+      <div className="relative z-10 section-padding flex items-center h-full pt-20 md:pt-30">
         <div className="max-w-2xl text-white space-y-6">
           {/* Pre-title */}
           <motion.div
@@ -20,7 +20,7 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="mb-6"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary border border-primary/20 text-primary text-xs md:text-sm font-medium">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full  glass-panel border border-primary/20 text-secondary text-xs md:text-sm font-medium">
               <Award className="w-4 h-4" />
               Senior Advocate | High Court Practitioner
             </span>
@@ -59,7 +59,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="btn-gold text-brown px-8 py-3 rounded-md font-semibold  transition cursor-pointer"
+            className="btn-gold text-brown px-8 py-3 rounded-default font-semibold  transition cursor-pointer"
           >
             BOOK APPOINTMENT
           </motion.button>
@@ -77,7 +77,7 @@ export default function Hero() {
               { icon: Award, value: "3+", label: "Years Experience" },
             ].map((stat, index) => (
               <div key={index} className="glass-panel p-2 md:p-4 text-center">
-                <stat.icon className="w-4 h-4 md:w-6 md:h-6 text-primary mx-auto mb-2" />
+                <stat.icon className="w-4 h-4 md:w-6 md:h-6 text-gold mx-auto mb-2" />
                 <div className="font-serif text-sm md:text-xl font-bold text-foreground">
                   {stat.value}
                 </div>
