@@ -12,7 +12,6 @@ import {
 const quickLinks = [
   { name: "About", href: "#about" },
   { name: "Practice Areas", href: "#practice" },
-  { name: "Blog", href: "#blog" },
   { name: "Gallery", href: "#gallery" },
   { name: "Contact", href: "#contact" },
 ];
@@ -111,7 +110,8 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
                 <span className="text-muted-foreground text-sm">
-                 R/at D. No.16/4, 3rd main, 10th cross, beside Magadi road, Govindrajnagar, Vijayanagar, Bengaluru, Karnataka-560040
+                  R/at D. No.16/4, 3rd main, 10th cross, beside Magadi road,
+                  Govindrajnagar, Vijayanagar, Bengaluru, Karnataka-560040
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -138,11 +138,12 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-border">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-center">
             <p className="text-muted-foreground text-sm text-center md:text-left">
-              © {new Date().getFullYear()} Balagali Associates. All rights reserved.
+              © {new Date().getFullYear()} Balagali Associates. All rights
+              reserved.
             </p>
-            <div className="flex items-center gap-6 text-sm text-muted-foreground">
+            {/* <div className="flex items-center gap-6 text-sm text-muted-foreground">
               <a href="#" className="hover:text-primary transition-colors">
                 Privacy Policy
               </a>
@@ -152,7 +153,7 @@ const Footer = () => {
               <a href="#" className="hover:text-primary transition-colors">
                 Disclaimer
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

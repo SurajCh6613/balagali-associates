@@ -2,6 +2,13 @@ import { motion } from "framer-motion";
 import { Award, Users, Briefcase } from "lucide-react";
 
 export default function Hero() {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section
       id="home"
@@ -11,7 +18,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/65"></div>
 
       {/* Hero Content */}
-      <div className="relative z-10 section-padding flex items-center h-full pt-20 md:pt-30">
+      <div className="relative z-10 section-padding flex items-center h-full pt-20 md:pt-30 pl-8 md:pl-16 lg:pl-24">
         <div className="max-w-2xl text-white space-y-6">
           {/* Pre-title */}
           <motion.div
@@ -59,6 +66,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            onClick={scrollToContact}
             className="btn-gold text-brown px-8 py-3 rounded-default font-semibold  transition cursor-pointer"
           >
             BOOK APPOINTMENT

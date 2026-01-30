@@ -50,15 +50,15 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="relative text-foreground/80 hover:text-primary transition-colors duration-300 text-sm font-medium tracking-wide group"
+                className="relative text-foreground/80 hover:text-gold transition-colors duration-300 text-sm font-medium tracking-wide group"
               >
                 {link.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
             <a href="tel:+91 6363016716" className="btn-gold text-sm flex gap-1 text-brown font-semibold">
               <PhoneIcon />
-              +91 6363016716
+              24/7 Legal Support
             </a>
           </div>
 

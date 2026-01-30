@@ -122,7 +122,8 @@
 
 // export default PracticeAreas;
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Scale,
   Briefcase,
@@ -131,40 +132,121 @@ import {
   Landmark,
   Globe,
   Gavel,
+  X,
+  CheckCircle,
 } from "lucide-react";
 
-const practiceAreas = [
+const practiceAreasData = [
   {
     title: "Criminal Law Services",
     icon: <Scale size={32} />,
+    description: "Expert representation in criminal matters at all levels of judiciary",
+    details: [
+      "Trial and appellate matters",
+      "Bail and anticipatory bail applications",
+      "Cheque bounce cases (NI Act – Section 138)",
+      "FIR quashing and criminal petitions",
+      "Criminal appeals to High Court",
+      "Defense in white-collar crimes",
+      "Criminal revision petitions",
+    ],
+    overview: "Our criminal law practice encompasses comprehensive legal representation in all criminal matters. We handle cases from initial investigation stage through trial and appeals, ensuring robust defense of our clients' rights and interests."
   },
   {
     title: "Corporate & Business Law",
     icon: <Briefcase size={32} />,
+    description: "Comprehensive corporate and commercial legal solutions",
+    details: [
+      "Company formation and incorporation",
+      "Corporate governance and compliance",
+      "Mergers and acquisitions",
+      "Joint ventures and partnerships",
+      "Contract drafting and negotiation",
+      "Intellectual property matters",
+      "Employment and labor law",
+    ],
+    overview: "We provide end-to-end legal solutions for businesses, from startups to established corporations. Our practice covers all aspects of corporate law, ensuring legal compliance and strategic business growth."
   },
   {
     title: "Family & Matrimonial Law",
     icon: <Users size={32} />,
+    description: "Compassionate legal support in family and matrimonial matters",
+    details: [
+      "Divorce and restitution of conjugal rights",
+      "Maintenance and alimony proceedings",
+      "Child custody and guardianship",
+      "Domestic Violence Act cases",
+      "Mutual consent divorce",
+      "Matrimonial property disputes",
+      "Adoption and surrogacy matters",
+    ],
+    overview: "Our family law practice handles sensitive matrimonial and family disputes with empathy and professionalism. We strive to achieve amicable resolutions while protecting our clients' legal rights and interests."
   },
   {
     title: "Civil & Property Law",
     icon: <Home size={32} />,
+    description: "Expert handling of civil litigation and property disputes",
+    details: [
+      "Property disputes and title matters",
+      "Injunctions and declarations",
+      "Recovery suits and money claims",
+      "Partition suits and family settlements",
+      "Specific performance of contracts",
+      "Builder-buyer disputes",
+      "All trial court and High Court matters",
+    ],
+    overview: "We handle all aspects of civil litigation with particular expertise in property-related disputes. Our practice extends to all civil courts and High Courts, ensuring comprehensive legal representation."
   },
   {
     title: "Banking & Financial Law",
     icon: <Landmark size={32} />,
+    description: "Specialized legal services in banking and financial matters",
+    details: [
+      "SARFAESI Act proceedings",
+      "Loan recovery and restructuring",
+      "Debt recovery tribunal matters",
+      "Banking fraud cases",
+      "Financial regulatory compliance",
+      "Insolvency and bankruptcy proceedings",
+      "Securities and investment disputes",
+    ],
+    overview: "Our banking and finance practice provides expert legal assistance in complex financial matters, helping both financial institutions and borrowers navigate the intricate legal landscape."
   },
   {
     title: "NRI Legal Services",
     icon: <Globe size={32} />,
+    description: "Dedicated legal support for Non-Resident Indians",
+    details: [
+      "Property matters in India",
+      "NRI matrimonial disputes",
+      "Investment and business setup",
+      "Inheritance and succession",
+      "Power of attorney documentation",
+      "Repatriation of funds",
+      "Remote case management and updates",
+    ],
+    overview: "We understand the unique challenges faced by NRIs in managing legal matters in India. Our dedicated NRI legal services provide seamless coordination and effective resolution of all legal issues."
   },
   {
     title: "Arbitration & Mediation",
     icon: <Gavel size={32} />,
+    description: "Alternative dispute resolution for efficient conflict resolution",
+    details: [
+      "Domestic and international arbitration",
+      "Mediation and conciliation services",
+      "Arbitration agreement drafting",
+      "Appointment of arbitrators",
+      "Challenge to arbitral awards",
+      "Enforcement of arbitral awards",
+      "Expert determination proceedings",
+    ],
+    overview: "Our ADR practice offers efficient, cost-effective alternatives to traditional litigation. We represent clients in arbitration and mediation proceedings, ensuring swift and fair resolution of disputes."
   },
 ];
 
 export default function PracticeAreas() {
+  const [selectedPractice, setSelectedPractice] = useState(null);
+
   return (
     <section id="practice" className="section-padding  bg-[url('/hero1.png')] bg-cover relative">
       <div className="absolute inset-0 bg-black/85"></div>
@@ -193,19 +275,19 @@ export default function PracticeAreas() {
       </motion.div>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-        {practiceAreas.map((item, index) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto relative">
+        {practiceAreasData.map((item, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            // transition={{ duration: 0.5,}}
             viewport={{ once: true }}
             whileHover={{ scale: 1.05 }}
+            onClick={() => setSelectedPractice(item)}
             className="group border border-gold/30 bg-black hover:bg-[#2a1b0a] transition-all duration-300 rounded-xl p-8 cursor-pointer relative overflow-hidden"
           >
             {/* Glow Effect */}
-            <div className="absolute inset-0 bg-linear-to-r from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
 
             {/* Icon */}
             <div className="w-14 h-14 flex items-center justify-center rounded-lg border border-gold text-gold mb-6 relative z-10 group-hover:bg-gold group-hover:text-black transition">
@@ -213,12 +295,122 @@ export default function PracticeAreas() {
             </div>
 
             {/* Title */}
-            <h3 className="text-white text-xl font-semibold relative z-10">
+            <h3 className="text-white text-xl font-semibold relative z-10 mb-3">
               {item.title}
             </h3>
+
+            {/* Description */}
+            <p className="text-gray-400 text-sm relative z-10">
+              {item.description}
+            </p>
+
+            {/* Click to learn more indicator */}
+            <p className="text-gold text-xs mt-4 relative z-10 opacity-0 group-hover:opacity-100 transition">
+              Click to learn more →
+            </p>
           </motion.div>
         ))}
       </div>
+
+      {/* Modal */}
+      <AnimatePresence>
+        {selectedPractice && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            onClick={() => setSelectedPractice(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              onClick={(e) => e.stopPropagation()}
+              className="bg-gradient-to-br from-[#1a1a1a] to-black border-2 border-gold/40 rounded-2xl max-w-3xl w-full max-h-[85vh] overflow-y-auto relative shadow-2xl"
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setSelectedPractice(null)}
+                className="absolute top-6 right-6 text-gray-400 hover:text-gold transition-colors z-10 bg-black/50 rounded-full p-2 hover:bg-black/70"
+              >
+                <X size={24} />
+              </button>
+
+              {/* Modal Header */}
+              <div className="bg-gradient-to-r from-gold/20 to-transparent p-8 pb-6 border-b border-gold/30">
+                <div className="flex items-start gap-6">
+                  <div className="w-16 h-16 flex items-center justify-center rounded-xl border-2 border-gold text-gold bg-gold/10 flex-shrink-0">
+                    {selectedPractice.icon}
+                  </div>
+                  <div className="flex-1">
+                    <h2 className="text-white text-3xl font-bold mb-2">
+                      {selectedPractice.title}
+                    </h2>
+                    <p className="text-gray-300 text-base">
+                      {selectedPractice.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Modal Content */}
+              <div className="p-8 space-y-6">
+                {/* Overview */}
+                <div>
+                  <h3 className="text-gold text-lg font-semibold mb-3 uppercase tracking-wide">
+                    Overview
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    {selectedPractice.overview}
+                  </p>
+                </div>
+
+                {/* Services List */}
+                <div>
+                  <h3 className="text-gold text-lg font-semibold mb-4 uppercase tracking-wide">
+                    Our Services Include
+                  </h3>
+                  <div className="grid gap-3">
+                    {selectedPractice.details.map((detail, idx) => (
+                      <motion.div
+                        key={idx}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: idx * 0.05 }}
+                        className="flex items-start gap-3 bg-white/5 p-4 rounded-lg hover:bg-white/10 transition-colors border border-gold/20"
+                      >
+                        <CheckCircle
+                          size={20}
+                          className="text-gold flex-shrink-0 mt-0.5"
+                        />
+                        <span className="text-gray-200">{detail}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Call to Action */}
+                <div className="bg-gradient-to-r from-gold/10 to-transparent border border-gold/30 rounded-xl p-6 mt-8">
+                  <p className="text-white text-lg mb-3">
+                    Need legal assistance in {selectedPractice.title.toLowerCase()}?
+                  </p>
+                  <p className="text-gray-300 mb-4">
+                    Our experienced legal team is ready to help you navigate your legal matters with expertise and dedication.
+                  </p>
+                 <a 
+                    href="tel:+916363016716"
+                    className="inline-block bg-gold text-black px-6 py-3 rounded-lg font-semibold hover:bg-gold/90 transition-colors"
+                  >
+                    Contact Us for Consultation
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
