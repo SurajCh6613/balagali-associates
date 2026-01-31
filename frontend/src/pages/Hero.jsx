@@ -18,8 +18,8 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/65"></div>
 
       {/* Hero Content */}
-      <div className="relative z-10 section-padding flex items-center h-full pt-20 md:pt-30 pl-8 md:pl-16 lg:pl-24">
-        <div className="max-w-2xl text-white space-y-6">
+      <div className="relative z-10 section-padding flex items-center justify-start xl:justify-center h-full pt-20 md:pt-30 pl-8 md:pl-16 lg:pl-24 xl:pl-0">
+        <div className="max-w-2xl text-white space-y-6 xl:text-center">
           {/* Pre-title */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
