@@ -166,13 +166,13 @@ const Navbar = () => {
                         >
                           <div className="flex items-start gap-2 sm:gap-3">
                             <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gold/10 flex items-center justify-center group-hover/item:bg-gold/20 transition-colors">
-                              <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-gold" />
+                              <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-brown" />
                             </div>
                             <div className="flex-1 min-w-0">
-                              <h4 className="text-xs sm:text-sm font-semibold text-foreground group-hover/item:text-gold transition-colors leading-tight">
+                              <h4 className="text-xs sm:text-sm font-semibold text-foreground group-hover/item:text-brown transition-colors leading-tight">
                                 {service.name}
                               </h4>
-                              <p className="text-[10px] sm:text-xs text-foreground/60 mt-0.5 sm:mt-1 leading-snug line-clamp-2">
+                              <p className="text-[10px] sm:text-xs text-white mt-0.5 sm:mt-1 leading-snug line-clamp-2">
                                 {service.description}
                               </p>
                             </div>

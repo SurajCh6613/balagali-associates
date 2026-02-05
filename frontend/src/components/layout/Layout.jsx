@@ -7,19 +7,20 @@ import Gallery from "../../pages/Gallery";
 import Contact from "../../pages/Contact";
 import FAQ from "../../pages/FAQ";
 import Footer from "./Footer";
+import DisclaimerModal from "../../components/DisclaimerModal";
 
 const Layout = () => {
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
-    
+
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      
-      sections.forEach(section => {
+
+      sections.forEach((section) => {
         const sectionHeight = section.offsetHeight;
         const sectionTop = section.offsetTop - 100; // Offset for navbar
         const sectionId = section.getAttribute("id");
-        
+
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
           window.history.replaceState(null, null, `#${sectionId}`);
         }
@@ -32,6 +33,7 @@ const Layout = () => {
 
   return (
     <div className="w-full h-full">
+      <DisclaimerModal />
       <Navbar />
       <section id="home">
         <Hero />
