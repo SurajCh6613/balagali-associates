@@ -3,7 +3,8 @@ import Navbar from "./Navbar";
 import Hero from "../../pages/Hero";
 import About from "../../pages/About";
 import PracticeAreas from "../../pages/PracticeAreas";
-import Gallery from "../../pages/Gallery";
+import Blog from "../../pages/Blog";
+//import Gallery from "../../pages/Gallery";
 import Contact from "../../pages/Contact";
 import FAQ from "../../pages/FAQ";
 import Footer from "./Footer";
@@ -50,9 +51,13 @@ const Layout = () => {
       <section id="faq">
         <FAQ />
       </section>
-      <section id="gallery">
-        <Gallery />
+      <section id="blog">
+        <Blog />
       </section>
+      
+      {/* <section id="gallery">
+        <Gallery />
+      </section> */}
       <Footer />
     </div>
   );

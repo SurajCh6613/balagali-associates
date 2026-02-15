@@ -38,7 +38,7 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="text-2xl md:text-4xl lg:text-6xl font-bold leading-tight"
           >
-            Balagali Associates
+            Bhailappa Associates
           </motion.h1>
 
           <motion.h2

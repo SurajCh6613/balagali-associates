@@ -41,7 +41,7 @@ const Footer = () => {
             <a href="#home" className="flex items-center gap-3 mb-6">
               <Scale className="w-8 h-8 text-gold" />
               <span className="font-serif text-xl font-semibold text-foreground">
-                Advocate <span className="text-gold">Balagali</span>
+                Advocate <span className="text-gold">Bhailappa</span>
               </span>
             </a>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
@@ -140,7 +140,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row items-center justify-center">
             <p className="text-muted-foreground text-sm text-center md:text-left">
-              © {new Date().getFullYear()} Balagali Associates. All rights
+              © {new Date().getFullYear()} Bhailappa Associates. All rights
               reserved.
             </p>
             {/* <div className="flex items-center gap-6 text-sm text-muted-foreground">
